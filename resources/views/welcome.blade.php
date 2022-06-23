@@ -23,7 +23,7 @@
     <body class="antialiased">
         <div class="w-75 mx-auto p-5">
             <div id="app">
-                <example-component></example-component>
+                <user-form></user-form>
             </div>
         </div>
 

@@ -57,14 +57,14 @@
             async submitForm() {
                 this.errors = [];
                 let response = await axios.post('api/users/add', this.form);
-                if (response.status !== 200) {
+                if (response.data != 'success') {
                     for(let prop in response.data) {
                      this.errors.push(JSON.stringify(response.data[prop]).slice(2, -2));
                     }
                 } else {
                     this.success = 'Dati salvati con successo';
+                } 
                 }
-            }
         },
     }
 </script>
