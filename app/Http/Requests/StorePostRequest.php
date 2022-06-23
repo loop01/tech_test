@@ -45,7 +45,6 @@ class StorePostRequest extends FormRequest
     }
 
     protected function failedValidation(Validator $validator) {
-        $this->validator = $validator;
         $errors = (new ValidationException($validator))->errors();
         throw new HttpResponseException(response()->json($errors));
     }

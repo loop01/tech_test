@@ -15,7 +15,7 @@ class UserApiController extends Controller
         try {
             User::create($request->all());
             return response('success', Response::HTTP_OK);
-            // return Response::json(User::create($request->all()), status: 201);
+            // return Response::json(User::create($request->all()), status: 200);
         } catch (\Exception $e) {
             return Response::json($e);
         }
